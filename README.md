@@ -38,7 +38,7 @@ Bu script, UserLAnd kullanıcılarının Android cihazlarda LXDE masaüstü orta
 
 ## Script Açıklaması
 
-- **lxde-setup.sh**: LXDE masaüstü ortamının kurulumu için kullanılan ana script. X Server yapılandırması ve LXDE'nin başlatılması işlemlerini otomatikleştirir.
+- **deinstall.sh**: LXDE masaüstü ortamının kurulumu için kullanılan ana script. X Server yapılandırması ve LXDE'nin başlatılması işlemlerini otomatikleştirir.
 
 ## Gereksinimler
 
