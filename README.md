@@ -26,7 +26,7 @@ Bu script, UserLAnd kullanıcılarının Android cihazlarda LXDE masaüstü orta
 
 5. **Script'i çalıştırın:**
     ```bash
-    bash lxde-setup.sh
+    bash deinstall.sh
     ```
 
 6. **X Server'ı yapılandırın:**
