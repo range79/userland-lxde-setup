@@ -55,6 +55,12 @@ Bu script, UserLAnd kullanıcılarının Android cihazlarda LXDE masaüstü orta
 
 - **1.1.0** - Bu sürümde, XSDL indirdiğinizi size sormak için fonksiyon yazdım.
 
+-**1.2.0**   
+
+    - 1. Bu sürümde her scripti baslattıgınızda otomatik olarak güncellemenın önüne geçıldı.
+    - 2. Gereksiz port sorusunın önüne geçildi
+    - 3. Eğer bır kez kurduysanız her script kurulmaya basladığında güncelleme yapmasının ve sudo apt -y lxde'nin önüne gecildi
+
 ## İletişim
 
 - **GitHub:** [@range79](https://github.com/range79)

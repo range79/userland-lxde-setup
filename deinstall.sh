@@ -5,7 +5,7 @@ display_banner() {
 ------------------------------------
 |                                  |
 |            🅓🅔🅘🅝🅢🅣🅐🅛🅛🅔🅡           | 
-|              v1.1.0                |
+|              v1.2.0                |
 |             𝐫𝐚𝐧𝐠𝐞𝟕𝟗              |
 |                                  |
 |                                  |
@@ -17,16 +17,9 @@ EOF
 
 main(){
     display_banner
-    update
-    xserver_xsdl_dwnld_chk
-    configure_and_start_lxde
-
+    yuklenmisse
 }
 
-update(){
- sudo apt update
- sudo apt upgrade -y
-}
 xserver_xsdl_dwnld_chk() {
     while true; do
         read -p "Xserver XSDL uygulamasını indirdiniz mi? (E/h): " cevap
@@ -38,34 +31,28 @@ xserver_xsdl_dwnld_chk() {
             sleep 4
         fi
     done
+    configure_and_start_lxde
 }
 
 
 
 configure_and_start_lxde() {
 
-    sudo apt install -y lxde
+  
 
     while true; do
 
-        read -p "DISPLAY numarasini girin (ornek: :0): " DISPLAY_NUMBER
-
- 
-        read -p "Port numarasini girin: " PORT_NUMBER
+        read -p "DISPLAY numarasini girin (ornek: x.x.x.x:x formatında): " DISPLAY_NUMBER
 
 
-        if ! [[ "$PORT_NUMBER" =~ ^[0-9]+$ ]] || [ "$PORT_NUMBER" -lt 1 ] || [ "$PORT_NUMBER" -gt 65535 ]; then
-            echo "Girdiginiz port numarasi geçersiz. 1 ile 65535 arasinda bir port numarasi giriniz."
-            continue
-        fi
 
-        echo "LXDE baslatiliyor, DISPLAY: $DISPLAY_NUMBER, Port numarasi: $PORT_NUMBER..."
+        echo "LXDE baslatiliyor, DISPLAY: $DISPLAY_NUMBER"
 
 
         export DISPLAY=$DISPLAY_NUMBER
-        export PULSE_SERVER=tcp:127.0.0.1:$PORT_NUMBER
+        export PULSE_SERVER=tcp:127.0.0.1:4713
 
-        # Start LXDE and handle errors
+        # lxdeyi baslat
         if startlxde; then
             echo "LXDE basariyla baslatildi."
             exit 0
@@ -74,7 +61,20 @@ configure_and_start_lxde() {
         fi
     done
 }
+yuklenmisse(){
+    read -p "ilk kezmi kurulum yapiyorsunuz?(E/h)" cevap
+      
+        
+        if [[ "$cevap" == "e" || "$cevap" == "E" ]]; then
+           sudo apt update
+           sudo apt upgrade -y
+           sudo apt install -y lxde 
+           xserver_xsdl_dwnld_chk
+        else
+          xserver_xsdl_dwnld_chk
+        fi
 
+}
 
 main
 
