@@ -10,7 +10,7 @@ sudo apt update && sudo apt upgrade
 ```
 **Arch:**
 ```bash
- sudo pacman -Syu
+ sudo pacman -Syu --noconfirm
 ```
 
 ## 2. Git Kurulumu

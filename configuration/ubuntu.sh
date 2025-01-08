@@ -1,2 +1,2 @@
-sudo apt -y update && sudo apt -y upgrade
+sudo apt update && sudo apt upgrade -y
 sudo apt install -y lxde 
