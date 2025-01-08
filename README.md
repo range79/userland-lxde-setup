@@ -42,7 +42,6 @@ Bu script, UserLAnd kullanıcılarının Android cihazlarda LXDE masaüstü orta
 
 ## Gereksinimler
 
-- **Ubuntu** veya Ubuntu tabanlı bir dağıtım.
 - **UserLAnd** uygulaması yüklü ve çalışır durumda.
 - **XSDL** uygulaması yüklü ve çalışır durumda.
 - **`sudo`** yetkileri.
@@ -60,7 +59,9 @@ Bu script, UserLAnd kullanıcılarının Android cihazlarda LXDE masaüstü orta
     - 1. Bu sürümde her scripti baslattıgınızda otomatik olarak güncellemenın önüne geçıldı.
     - 2. Gereksiz port sorusunın önüne geçildi
     - 3. Eğer bır kez kurduysanız her script kurulmaya basladığında güncelleme yapmasının ve sudo apt -y lxde'nin önüne gecildi
-
+**2.0.0**
+   - 1. Fonsiyonlar dosyalara bölündu daha kolay yönetılebilmek içiç
+   - 2. Arch lınux desteği eklendi
 ## İletişim
 
 - **GitHub:** [@range79](https://github.com/range79)
