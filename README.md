@@ -1,67 +1,79 @@
 # UserLAnd LXDE Kurulum Script'i
 
-Bu script, UserLAnd kullanıcılarının Android cihazlarda LXDE masaüstü ortamını kurmalarına yardımcı olur.
+Bu script, **UserLAnd** kullanıcılarının Android cihazlarda **LXDE** masaüstü ortamını kurmalarına yardımcı olur.
 
-## Kullanım
+## 1. Sistem Güncellemesi
 
-1. **Sisteminizi güncelleyiniz:**
-    ```bash
-    sudo apt update && sudo apt upgrade
-    ```
+**Ubuntu:**
+```bash
+sudo apt update && sudo apt upgrade
+```
+**Arch:**
+```bash
+ sudo pacman -Syu
+```
 
-2. **Git'i indirin:**
-    ```bash
-    sudo apt install git
-    ```
+## 2. Git Kurulumu
 
-3. **Script'i indirin:**
-    ```bash
-    git clone https://github.com/range79/userland-lxde-setup.git
-    ```
+**Ubuntu:**
+```bash
+sudo apt install git
+```
 
-4. **Script'in bulunduğu dizine gidin:**
+**Arch Linux:**
+```bash
+sudo pacman -S git
+```
+
+## 3. Script'in İndirilmesi
+
+```bash
+git clone https://github.com/range79/userland-lxde-setup.git
+```
+
+## 4. Script'in Çalıştırılması
+
+1. **Script'in Bulunduğu Dizine Gidin:**
     ```bash
     cd userland-lxde-setup
     ```
-
-5. **Script'i çalıştırın:**
+2. **Script'i Başlatın:**
     ```bash
     bash deinstall.sh
     ```
 
-6. **X Server'ı yapılandırın:**
-    - UserLAnd uygulamasını açın ve `XSDL` uygulamasını yükleyin.
-    - `XSDL`'yi başlatın ve port numarasını not alın.
+## 5. X Server Yapılandırması
 
-7. **Port numarasını script'e girin:**
-    - Script çalıştırıldığında sizden XSDL port numarasını girmenizi isteyecektir. Port numarasını doğru bir şekilde girin.
-
-## Script Açıklaması
-
-- **deinstall.sh**: LXDE masaüstü ortamının kurulumu için kullanılan ana script. X Server yapılandırması ve LXDE'nin başlatılması işlemlerini otomatikleştirir.
+- **UserLAnd** uygulamasını açın ve **XSDL** uygulamasını yükleyin.
+- **XSDL**'yi başlatın ve port numarasını not alın.
+- Script çalıştırıldığında sizden XSDL port numarasını girmenizi isteyecektir. Port numarasını doğru bir şekilde girin.
 
 ## Gereksinimler
 
-- **UserLAnd** uygulaması yüklü ve çalışır durumda.
-- **XSDL** uygulaması yüklü ve çalışır durumda.
-- **`sudo`** yetkileri.
+- **UserLAnd** uygulaması yüklü ve çalışır durumda olmalıdır.
+- **XSDL** uygulaması yüklü ve çalışır durumda olmalıdır.
+- **sudo** yetkileri gereklidir.
 
 ## Sürüm Değişiklik Günlüğü
 
-- **1.0.0-test** - Bu sürüm, script'in temel işlevselliğini test etmek amacıyla yayımlanmıştır. Kurulum ve başlatma işlemlerinin doğru çalışıp çalışmadığını kontrol etmek için kullanılmalıdır.
+### 1.0.0-test
+- Script'in temel işlevselliğini test etmek amacıyla yayımlandı.
 
-- **1.0.1** - Bu sürümde, hataları düzeltmeye çalıştım ve düzeltim bence.
+### 1.0.1
+- Hatalar giderildi ve kurulum işlemleri optimize edildi.
 
-- **1.1.0** - Bu sürümde, XSDL indirdiğinizi size sormak için fonksiyon yazdım.
+### 1.1.0
+- XSDL indirilip indirilmediğini kontrol eden bir fonksiyon eklendi.
 
--**1.2.0**   
+### 1.2.0
+- Script her çalıştırıldığında otomatik güncellemenin önüne geçildi.
+- Gereksiz port sorgusu kaldırıldı.
+- Daha önce kurulmuş sistemlerde gereksiz tekrar kurulum yapılmasının önüne geçildi.
 
-    - 1. Bu sürümde her scripti baslattıgınızda otomatik olarak güncellemenın önüne geçıldı.
-    - 2. Gereksiz port sorusunın önüne geçildi
-    - 3. Eğer bır kez kurduysanız her script kurulmaya basladığında güncelleme yapmasının ve sudo apt -y lxde'nin önüne gecildi
-**2.0.0**
-   - 1. Fonsiyonlar dosyalara bölündu daha kolay yönetılebilmek içiç
-   - 2. Arch lınux desteği eklendi
+### 2.0.0
+- Fonksiyonlar dosyalara bölündü, böylece yönetim kolaylaştırıldı.
+- **Arch Linux** desteği eklendi.
+
 ## İletişim
 
 - **GitHub:** [@range79](https://github.com/range79)
@@ -69,4 +81,5 @@ Bu script, UserLAnd kullanıcılarının Android cihazlarda LXDE masaüstü orta
 
 ## Lisans
 
-Bu script [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
+Bu script, [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
+
