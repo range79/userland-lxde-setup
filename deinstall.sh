@@ -14,69 +14,46 @@ display_banner() {
 EOF
 }
 
+yuklenmisse(){
+    read -p "ilk kezmi kurulum yapiyorsunuz?(E/h)" cevap
+      
+        
+        if [[ "$cevap" == "e" || "$cevap" == "E" ]]; then
+        whichos
+        
+        else
+          bash configuration/xsdlcheck.sh
+        fi
+
+}
+
+
+whichos(){
+    read -p 'hangi osu kulliyorsunuz
+             1.arch
+             2.ubuntu  '  cevap
+    if [[ "$cevap" == "1" ]]; then
+bash configuration/arch.sh
+elif [[ "$cevap" == "2" ]]; then
+bash configuration/ubuntu.sh
+else {
+    echo "yanlis karakter girdiniz"
+    sleep 2 
+    clear 
+    whichos
+}
+fi
+
+}
 
 main(){
     display_banner
     yuklenmisse
 }
 
-xserver_xsdl_dwnld_chk() {
-    while true; do
-        read -p "Xserver XSDL uygulamasını indirdiniz mi? (E/h): " cevap
-        if [[ "$cevap" == "e" || "$cevap" == "E" ]]; then
-            # Kullanıcı "E" veya "e" olarak yanıtladıysa döngüden çık
-            break
-        else
-            echo "Xserver XSDL uygulamasını indiriniz."
-            sleep 4
-        fi
-    done
-    configure_and_start_lxde
-}
-
-
-
-configure_and_start_lxde() {
-
-  
-
-    while true; do
-
-        read -p "DISPLAY numarasini girin (ornek: x.x.x.x:x formatında): " DISPLAY_NUMBER
-
-
-
-        echo "LXDE baslatiliyor, DISPLAY: $DISPLAY_NUMBER"
-
-
-        export DISPLAY=$DISPLAY_NUMBER
-        export PULSE_SERVER=tcp:127.0.0.1:4713
-
-        # lxdeyi baslat
-        if startlxde; then
-            echo "LXDE basariyla baslatildi."
-            exit 0
-        else
-            echo "LXDE baslatilirken hata olustu. Lutfen yeni değerler giriniz."
-        fi
-    done
-}
-yuklenmisse(){
-    read -p "ilk kezmi kurulum yapiyorsunuz?(E/h)" cevap
-      
-        
-        if [[ "$cevap" == "e" || "$cevap" == "E" ]]; then
-           sudo apt update
-           sudo apt upgrade -y
-           sudo apt install -y lxde 
-           xserver_xsdl_dwnld_chk
-        else
-          xserver_xsdl_dwnld_chk
-        fi
-
-}
 
 main
+
 
 
 
