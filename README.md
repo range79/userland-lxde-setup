@@ -1,71 +1,85 @@
-# UserLAnd LXDE Kurulum Script'i
 
-Bu script, UserLAnd kullanıcılarının Android cihazlarda LXDE masaüstü ortamını kurmalarına yardımcı olur.
+[![Türkçe README'ye Gitmak İçin Tıkla](https://img.shields.io/badge/Readme-Türkçe-blue?style=for-the-badge&logo=markdown)](README-TR.md)
 
-## Kullanım
+# UserLAnd LXDE Setup Script
 
-1. **Sisteminizi güncelleyiniz:**
-    ```bash
-    sudo apt update && sudo apt upgrade
-    ```
+This script helps **UserLAnd** users install the **LXDE** desktop environment on their Android devices.
 
-2. **Git'i indirin:**
-    ```bash
-    sudo apt install git
-    ```
+### Features  
+- Supports Arch Linux and Ubuntu  
+- System update and basic package installation  
+- Checks if XSDL app is installed  
+- Language selection: Turkish and English  
+- Modular and easy to manage structure  
+- Prevents redundant installations on already configured systems
 
-3. **Script'i indirin:**
-    ```bash
-    git clone https://github.com/range79/userland-lxde-setup.git
-    ```
+### Installation Steps
 
-4. **Script'in bulunduğu dizine gidin:**
-    ```bash
-    cd userland-lxde-setup
-    ```
+1. **System Update**  
+Ubuntu:  
+```bash
+sudo apt update && sudo apt upgrade
+````
 
-5. **Script'i çalıştırın:**
-    ```bash
-    bash deinstall.sh
-    ```
+Arch Linux:
 
-6. **X Server'ı yapılandırın:**
-    - UserLAnd uygulamasını açın ve `XSDL` uygulamasını yükleyin.
-    - `XSDL`'yi başlatın ve port numarasını not alın.
+```bash
+sudo pacman -Syu --noconfirm
+```
 
-7. **Port numarasını script'e girin:**
-    - Script çalıştırıldığında sizden XSDL port numarasını girmenizi isteyecektir. Port numarasını doğru bir şekilde girin.
+2. **Install Git**
+   Ubuntu:
 
-## Script Açıklaması
+```bash
+sudo apt install git
+```
 
-- **deinstall.sh**: LXDE masaüstü ortamının kurulumu için kullanılan ana script. X Server yapılandırması ve LXDE'nin başlatılması işlemlerini otomatikleştirir.
+Arch Linux:
 
-## Gereksinimler
+```bash
+sudo pacman -S git
+```
 
-- **Ubuntu** veya Ubuntu tabanlı bir dağıtım.
-- **UserLAnd** uygulaması yüklü ve çalışır durumda.
-- **XSDL** uygulaması yüklü ve çalışır durumda.
-- **`sudo`** yetkileri.
+3. **Clone the Script**
 
-## Sürüm Değişiklik Günlüğü
+```bash
+git clone https://github.com/range79/userland-lxde-setup.git
+```
 
-- **1.0.0-test** - Bu sürüm, script'in temel işlevselliğini test etmek amacıyla yayımlanmıştır. Kurulum ve başlatma işlemlerinin doğru çalışıp çalışmadığını kontrol etmek için kullanılmalıdır.
+4. **Run the Script**
 
-- **1.0.1** - Bu sürümde, hataları düzeltmeye çalıştım ve düzeltim bence.
+```bash
+cd userland-lxde-setup
+bash deinstall.sh
+```
 
-- **1.1.0** - Bu sürümde, XSDL indirdiğinizi size sormak için fonksiyon yazdım.
+5. **X Server Setup**
 
--**1.2.0**   
+* Open UserLAnd app and install the XSDL app.
+* Launch XSDL and note the port number.
+* When running the script, you will be asked to enter this port number.
 
-    - 1. Bu sürümde her scripti baslattıgınızda otomatik olarak güncellemenın önüne geçıldı.
-    - 2. Gereksiz port sorusunın önüne geçildi
-    - 3. Eğer bır kez kurduysanız her script kurulmaya basladığında güncelleme yapmasının ve sudo apt -y lxde'nin önüne gecildi
+### Requirements
 
-## İletişim
+* UserLAnd app must be installed and running.
+* XSDL app must be installed and running.
+* Sudo privileges are required.
 
-- **GitHub:** [@range79](https://github.com/range79)
-- **Telegram:** [@Onlyrange](https://t.me/Onlyrange)
+### Changelog
 
-## Lisans
+* 2.0.0: Modular structure, Arch Linux support, English language option added
+* 1.2.0: Disabled auto updates, removed unnecessary port queries
+* 1.1.0: Added XSDL installation check
+* 1.0.1: Bug fixes and optimizations
+* 1.0.0-test: Basic functionality tested and released
 
-Bu script [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
+### Contact
+
+* GitHub: [@range79](https://github.com/range79)
+* Telegram: [@Onlyrange](https://t.me/Onlyrange)
+
+### License
+
+This script is licensed under the [MIT License](LICENSE).
+
+
