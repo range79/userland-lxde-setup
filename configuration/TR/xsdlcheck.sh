@@ -8,4 +8,4 @@
             sleep 4
         fi
     done
- bash configuration/lxdeconfig.sh
+ bash configuration/TR/lxdeconfig.sh

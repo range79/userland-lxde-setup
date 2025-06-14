@@ -1,85 +1,85 @@
-# UserLAnd LXDE Kurulum Script'i
 
-Bu script, **UserLAnd** kullanıcılarının Android cihazlarda **LXDE** masaüstü ortamını kurmalarına yardımcı olur.
+[![Türkçe README'ye Gitmak İçin Tıkla](https://img.shields.io/badge/Readme-Türkçe-blue?style=for-the-badge&logo=markdown)](README-TR.md)
 
-## 1. Sistem Güncellemesi
+# UserLAnd LXDE Setup Script
 
-**Ubuntu:**
+This script helps **UserLAnd** users install the **LXDE** desktop environment on their Android devices.
+
+### Features  
+- Supports Arch Linux and Ubuntu  
+- System update and basic package installation  
+- Checks if XSDL app is installed  
+- Language selection: Turkish and English  
+- Modular and easy to manage structure  
+- Prevents redundant installations on already configured systems
+
+### Installation Steps
+
+1. **System Update**  
+Ubuntu:  
 ```bash
 sudo apt update && sudo apt upgrade
-```
-**Arch:**
+````
+
+Arch Linux:
+
 ```bash
- sudo pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm
 ```
 
-## 2. Git Kurulumu
+2. **Install Git**
+   Ubuntu:
 
-**Ubuntu:**
 ```bash
 sudo apt install git
 ```
 
-**Arch Linux:**
+Arch Linux:
+
 ```bash
 sudo pacman -S git
 ```
 
-## 3. Script'in İndirilmesi
+3. **Clone the Script**
 
 ```bash
 git clone https://github.com/range79/userland-lxde-setup.git
 ```
 
-## 4. Script'in Çalıştırılması
+4. **Run the Script**
 
-1. **Script'in Bulunduğu Dizine Gidin:**
-    ```bash
-    cd userland-lxde-setup
-    ```
-2. **Script'i Başlatın:**
-    ```bash
-    bash deinstall.sh
-    ```
+```bash
+cd userland-lxde-setup
+bash deinstall.sh
+```
 
-## 5. X Server Yapılandırması
+5. **X Server Setup**
 
-- **UserLAnd** uygulamasını açın ve **XSDL** uygulamasını yükleyin.
-- **XSDL**'yi başlatın ve port numarasını not alın.
-- Script çalıştırıldığında sizden XSDL port numarasını girmenizi isteyecektir. Port numarasını doğru bir şekilde girin.
+* Open UserLAnd app and install the XSDL app.
+* Launch XSDL and note the port number.
+* When running the script, you will be asked to enter this port number.
 
-## Gereksinimler
+### Requirements
 
-- **UserLAnd** uygulaması yüklü ve çalışır durumda olmalıdır.
-- **XSDL** uygulaması yüklü ve çalışır durumda olmalıdır.
-- **sudo** yetkileri gereklidir.
+* UserLAnd app must be installed and running.
+* XSDL app must be installed and running.
+* Sudo privileges are required.
 
-## Sürüm Değişiklik Günlüğü
+### Changelog
 
-### 1.0.0-test
-- Script'in temel işlevselliğini test etmek amacıyla yayımlandı.
+* 2.0.0: Modular structure, Arch Linux support, English language option added
+* 1.2.0: Disabled auto updates, removed unnecessary port queries
+* 1.1.0: Added XSDL installation check
+* 1.0.1: Bug fixes and optimizations
+* 1.0.0-test: Basic functionality tested and released
 
-### 1.0.1
-- Hatalar giderildi ve kurulum işlemleri optimize edildi.
+### Contact
 
-### 1.1.0
-- XSDL indirilip indirilmediğini kontrol eden bir fonksiyon eklendi.
+* GitHub: [@range79](https://github.com/range79)
+* Telegram: [@Onlyrange](https://t.me/Onlyrange)
 
-### 1.2.0
-- Script her çalıştırıldığında otomatik güncellemenin önüne geçildi.
-- Gereksiz port sorgusu kaldırıldı.
-- Daha önce kurulmuş sistemlerde gereksiz tekrar kurulum yapılmasının önüne geçildi.
+### License
 
-### 2.0.0
-- Fonksiyonlar dosyalara bölündü, böylece yönetim kolaylaştırıldı.
-- **Arch Linux** desteği eklendi.
+This script is licensed under the [MIT License](LICENSE).
 
-## İletişim
-
-- **GitHub:** [@range79](https://github.com/range79)
-- **Telegram:** [@Onlyrange](https://t.me/Onlyrange)
-
-## Lisans
-
-Bu script, [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
 
